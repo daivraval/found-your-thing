@@ -4,10 +4,9 @@ import Hero from "@/components/Hero";
 import ItemsList from "@/components/ItemsList";
 import ItemForm from "@/components/ItemForm";
 import { useToast } from "@/hooks/use-toast";
-import type { Item } from "@/components/ItemCard";
 
 // Mock data for demonstration
-const mockItems: Item[] = [
+const mockItems = [
   {
     id: "1",
     title: "iPhone 13 Pro",

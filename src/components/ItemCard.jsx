@@ -2,22 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, User } from "lucide-react";
 
-export interface Item {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  location: string;
-  date: string;
-  contact: string;
-  type: "lost" | "found";
-}
-
-interface ItemCardProps {
-  item: Item;
-}
-
-const ItemCard = ({ item }: ItemCardProps) => {
+const ItemCard = ({ item }) => {
   return (
     <Card className="hover:shadow-card transition-all duration-300 hover:scale-105 bg-gradient-card border-0">
       <CardContent className="p-6">

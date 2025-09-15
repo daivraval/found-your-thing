@@ -1,20 +1,25 @@
 import { Button } from "@/components/ui/button";
-import { Search, Plus } from "lucide-react";
+import { Search, Plus, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface HeaderProps {
-  onShowLostForm: () => void;
-  onShowFoundForm: () => void;
-}
-
-const Header = ({ onShowLostForm, onShowFoundForm }: HeaderProps) => {
+const Header = ({ onShowLostForm, onShowFoundForm }) => {
   return (
     <header className="bg-card shadow-card border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Search className="h-8 w-8 text-primary" />
             <h1 className="text-2xl font-bold text-foreground">FindIt</h1>
-          </div>
+          </Link>
+          
+          <nav className="hidden md:flex items-center space-x-6">
+            <Link to="/search" className="text-muted-foreground hover:text-foreground">Search</Link>
+            <Link to="/categories" className="text-muted-foreground hover:text-foreground">Categories</Link>
+            <Link to="/statistics" className="text-muted-foreground hover:text-foreground">Statistics</Link>
+            <Link to="/about" className="text-muted-foreground hover:text-foreground">About</Link>
+            <Link to="/contact" className="text-muted-foreground hover:text-foreground">Contact</Link>
+            <Link to="/dashboard" className="text-muted-foreground hover:text-foreground">Dashboard</Link>
+          </nav>
           
           <div className="flex gap-3">
             <Button 
